@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css"/>
+    <script src="jquery.min.js"></script>
+    <script src="jquery.equalHeightChildren.js"></script>
+    <style>
+        /* just a light background/border to show the actual height of the containing div*/
+        div.txt {
+            background: #eafed9;
+            height: 100%;
+            border: 1px solid #d0e4bf;
+            padding: 5px;
+        }
+
+        /* some padding to make it nice looking */
+        div.row > div {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Without Equal Height Chieldren</h1>
+
+    <div class="row">
+        <div class="col-md-4 col-xs-6">
+            <div class="txt">Lorem ipsum dolor
+            </div>
+        </div>
+        <div class="col-md-4 col-xs-6">
+            <div class="txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aut esse necessitatibus,
+                odit ut voluptates! A asperiores mollitia porro sunt?
+            </div>
+        </div>
+        <div class="col-md-4 col-xs-6">
+            <div class="txt">Animi debitis fuga molestias perferendis quasi qui voluptas. Dolorem ea eaque harum illo
+                ipsam laboriosam libero repudiandae soluta suscipit tempore.
+            </div>
+        </div>
+
+        <div class="col-md-4 col-xs-6">
+            <div class="txt">Atque autem commodi, consequuntur cumque d Lorem ipsum dolor sit amet, consectetur
+                adipisicing elit. At consequatur deserunt dolor ex fugit in incidunt magnam placeat ratione saepe!
+            </div>
+        </div>
+        <div class="col-md-4 col-xs-6">
+            <div class="txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur assumenda deserunt
+                fugiat inventore labore minus quibusdam rerum suscipit ut! Laudantium. Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Accusamus accusantium aliquid asperiores aut commodi consectetur dicta
+                dolorum et, ipsum iste laudantium minima mollitia nam necessitatibus possimus provident quasi recusandae
+                repellendus rerum sequi sint soluta temporibus tenetur veritatis, voluptas voluptate, voluptatem.
+                Adipisci amet, autem eligendi eveniet nesciunt quis tempora. Eaque, eius!
+            </div>
+        </div>
+        <div class="col-md-4 col-xs-6">
+            <div class="txt">Fugit in nobis perspiciatis quae quibusdam</div>
+        </div>
+        <div class="col-md-4 col-xs-6">
+            <div class="txt">Accusamus aliquid animi at debitis deleniti ducimus incidunt nam natus nobis non,
+                obcaecati omnis optio sint sit temporibus tenetur, totam!
+            </div>
+        </div>
+        <div class="col-md-4 col-xs-6">
+            <div class="txt">Ab, alias amet at consequuntur cupiditate doloribus illum impedit nulla, officiis placeat
+                quidem quod, sequi sint sit sunt tempore veritatis.
+            </div>
+        </div>
+        <div class="col-md-4 col-xs-6">
+            <div class="txt">Ab, alias amet at consequuntur cupiditate doloribus illum impedit nulla, officiis placeat
+                quidem quod, sequi sint sit sunt tempore veritatis.
+            </div>
+        </div>
+    </div>
+    <h1>With Equal Height Chieldren<small>data-equal-height-children</small></h1>
+
+    <div class="row" data-equal-height-children>
+        <div class="col-md-4 col-xs-6">
+            <div class="txt">Lorem ipsum dolor
+            </div>
+        </div>
+        <div class="col-md-4 col-xs-6">
+            <div class="txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aut esse necessitatibus,
+                odit ut voluptates! A asperiores mollitia porro sunt?
+            </div>
+        </div>
+        <div class="col-md-4 col-xs-6">
+            <div class="txt">Animi debitis fuga molestias perferendis quasi qui voluptas. Dolorem ea eaque harum illo
+                ipsam laboriosam libero repudiandae soluta suscipit tempore.
+            </div>
+        </div>
+
+        <div class="col-md-4 col-xs-6">
+            <div class="txt">Atque autem commodi, consequuntur cumque d Lorem ipsum dolor sit amet, consectetur
+                adipisicing elit. At consequatur deserunt dolor ex fugit in incidunt magnam placeat ratione saepe!
+            </div>
+        </div>
+        <div class="col-md-4 col-xs-6">
+            <div class="txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur assumenda deserunt
+                fugiat inventore labore minus quibusdam rerum suscipit ut! Laudantium. Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Accusamus accusantium aliquid asperiores aut commodi consectetur dicta
+                dolorum et, ipsum iste laudantium minima mollitia nam necessitatibus possimus provident quasi recusandae
+                repellendus rerum sequi sint soluta temporibus tenetur veritatis, voluptas voluptate, voluptatem.
+                Adipisci amet, autem eligendi eveniet nesciunt quis tempora. Eaque, eius!
+            </div>
+        </div>
+        <div class="col-md-4 col-xs-6">
+            <div class="txt">Fugit in nobis perspiciatis quae quibusdam</div>
+        </div>
+        <div class="col-md-4 col-xs-6">
+            <div class="txt">Accusamus aliquid animi at debitis deleniti ducimus incidunt nam natus nobis non,
+                obcaecati omnis optio sint sit temporibus tenetur, totam!
+            </div>
+        </div>
+        <div class="col-md-4 col-xs-6">
+            <div class="txt">Ab, alias amet at consequuntur cupiditate doloribus illum impedit nulla, officiis placeat
+                quidem quod, sequi sint sit sunt tempore veritatis.
+            </div>
+        </div>
+        <div class="col-md-4 col-xs-6">
+            <div class="txt">Ab, alias amet at consequuntur cupiditate doloribus illum impedit nulla, officiis placeat
+                quidem quod, sequi sint sit sunt tempore veritatis.
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

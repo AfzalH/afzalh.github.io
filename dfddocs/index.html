@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DF Dance Studio Website Documentation</title>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:100,200,300,400|Roboto' rel='stylesheet' type='text/css'>
+    <script src="js/jquery.min.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        div, h1, h2, h3 {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 100;
+        }
+
+        h1 {
+            font-size: 400%;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 320%;
+        }
+
+        h3 {
+            font-size: 250%;
+        }
+
+        .group-title{
+            text-align: center;
+            /*text-decoration: underline;*/
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            margin-top: 30px;
+            border-bottom: 1px dotted;
+        }
+
+        p, a, span {
+            font-family: 'Raleway', sans-serif;
+            font-size: 130%;
+            word-spacing: 5px;
+            letter-spacing: 2px;
+            line-height: 1.4;
+            font-weight: 300;
+        }
+
+        div.cont {
+            width: 1200px;
+            max-width: 90%;
+            margin: 0 auto;
+            background: rgb(74, 74, 74);
+            color: #bababa;
+            padding: 1% 7%;
+        }
+
+        ol li {
+            line-height: 2.5;
+        }
+
+        a, a:hover, a:visited, a:focus {
+            color: #bababa;
+            text-decoration: underline;
+        }
+
+        ::-webkit-scrollbar {
+            width: 3px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888888;
+
+        }
+
+        div.bg {
+            background: url(images/maze.png) repeat;
+            width: 100%;
+            height: 100%;
+            position: static;
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+        a.to-top, a.to-top:visited, a.to-top:focus{
+            display: block;
+            position: fixed;
+            bottom: 50%;
+            left: 5px;
+            background: rgba(122, 122, 122, 0.1);
+            padding: 5px;
+            border-radius: 20%;
+            cursor: pointer;
+            color: #b4b4b4;
+            text-decoration: none;
+            font-size: 100%;
+            letter-spacing: 1px;
+            line-height: 1;
+
+        }
+        a.to-top:hover{
+            background: rgba(122, 122, 122, 0.3);
+            text-decoration: none;
+        }
+    </style>
+
+    <script>
+    </script>
+</head>
+<body>
+<div class="bg">
+    <div class="cont">
+
+        <h1>DF Dance Studio Website Documentation</h1>
+
+        <h3 id="index">Index</h3>
+        <ol id="index-list">
+            <li><a href="#admin">Admin Access</a>
+                <ol>
+                    <li><a href="#backend-admin">Backend Admin</a></li>
+                    <li><a href="#frontend-admin">Frontend Admin</a></li>
+                </ol>
+            </li>
+            <li><a href="#menu">Menu</a>
+                <ol>
+                    <li><a href="#how-menu">How The Menu is Built</a></li>
+                    <li><a href="#edit-menu-item">Edit a Menu Item</a></li>
+                    <li><a href="#add-menu-item">Adding a New Menu Item</a></li>
+                    <li><a href="#fixing-menu-layout">Fixing Menu Layout</a></li>
+                    <li><a href="#fixing-permalink">Fixing Permalink and Menu Structure</a></li>
+                    <li><a href="#menu-icon">Menu Icons</a></li>
+                    <li><a href="#menu-template-options">Template Options for Menu</a></li>
+                </ol>
+            </li>
+            <li><a href="#content">Content/Page</a>
+                <ol>
+                    <li><a href="#add-article">Adding an Article</a></li>
+                    <li><a href="#edit-article">Editing Article</a></li>
+                    <li><a href="#best-practice-article">Best Practices</a></li>
+                </ol>
+            </li>
+            <li><a href="#modules">Modules</a>
+                <ol>
+                    <li><a href="#types-used">Module Types Used</a></li>
+                    <li><a href="#edit-modules">Editing a Module</a></li>
+                    <li><a href="#edit-widgetkit-modules">Editing a WidgetKit Module</a></li>
+                    <li><a href="#menu-assignment">Menu Assignment for a Module</a></li>
+                    <li><a href="#position-assignment">Position For the module</a></li>
+                    <li><a href="#module-template-options">Template Options for Module</a></li>
+                </ol>
+            </li>
+            <li><a href="#layouts">Template Layout Options</a></li>
+        </ol>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad aliquam consequuntur deleniti
+            distinctio dolor doloremque eligendi error et eum expedita explicabo fugiat harum hic in iure iusto
+            molestiae mollitia nesciunt nobis, obcaecati odio odit officia omnis perferendis possimus quae qui
+            quidem quos recusandae repellendus repudiandae sit tenetur velit veniam voluptas voluptatum. A
+            accusantium alias aliquid aspernatur cupiditate doloremque dolores enim esse explicabo iste laudantium
+            minus molestias natus necessitatibus nihil non quia recusandae sunt tempore temporibus, vitae voluptatem
+            voluptatibus. Asperiores aspernatur deleniti dolores et eveniet excepturi expedita facilis fuga harum
+            iste iusto magni, molestiae neque nobis perferendis quo quod recusandae tempore veritatis vitae. Autem
+            dicta, dolorem eligendi eos in iusto nostrum placeat. Alias blanditiis dolorem ea enim in magni
+            molestiae, nobis officia quam ratione! Consectetur cupiditate facilis in nam optio pariatur quam quasi
+            velit. A aspernatur beatae consequuntur doloremque et ex fugiat inventore maiores officia quis. A ab
+            autem ipsa minima neque quis repellat similique voluptatibus. Aliquid dolorum eligendi est molestias
+            odit ratione? Eveniet odio, quam. Alias asperiores consectetur consequatur culpa deleniti dolorem
+            doloremque eaque enim facilis impedit ipsam libero, magnam molestias nemo nobis, obcaecati placeat porro
+            praesentium quibusdam quis similique sit tempore temporibus tenetur voluptatum! Dolore incidunt maiores
+            possimus.</p>
+
+
+
+        <h2 id="admin" class="group-title">Admin Access</h2>
+
+        <h3 id="backend-admin">Backend Admin</h3>
+        <h3 id="frontend-admin">Frontend Admin</h3>
+
+
+        <h2 id="menu" class="group-title">Menu</h2>
+
+        <h3 id="how-menu">How The Menu is Built</h3>
+        <h3 id="edit-menu-item">Edit a Menu Item</h3>
+        <h3 id="add-menu-item">Adding a New Menu Item</h3>
+        <h3 id="fixing-menu-layout">Fixing Menu Layout</h3>
+        <h3 id="fixing-permalink">Fixing Permalink and Menu Structure</h3>
+        <h3 id="menu-icon">Menu Icons</h3>
+        <h3 id="menu-template-options">Template Options for Menu</h3>
+
+
+        <h2 id="content" class="group-title">Content/Page</h2>
+
+        <h3 id="add-article">Adding an Article</h3>
+        <h3 id="edit-article">Editing Article</h3>
+        <h3 id="best-practice-article">Best Practices</h3>
+
+
+        <h2 id="modules" class="group-title">Modules</h2>
+
+        <h3 id="types-used">Module Types Used</h3>
+        <h3 id="edit-modules">Editing a Module</h3>
+        <h3 id="edit-widgetkit-modules">Editing a WidgetKit Module</h3>
+        <h3 id="menu-assignment">Menu Assignment for a Module</h3>
+        <h3 id="position-assignment">Position For the module</h3>
+        <h3 id="module-template-options">Template Options for Module</h3>
+
+
+        <h2 id="layouts" class="group-title">Template Layout Options</h2>
+
+    </div>
+    <a href="#index" class="to-top">Index</a>
+</div>
+<script src="http://cdn.jsdelivr.net/jquery.scrollto/2.1.0/jquery.scrollTo.min.js"></script>
+<script src="http://cdn.jsdelivr.net/jquery.localscroll/1.4.0/jquery.localScroll.min.js"></script>
+<script>
+    $.localScroll({'duration':200});
+</script>
+</body>
+</html>

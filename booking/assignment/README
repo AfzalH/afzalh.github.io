@@ -1,0 +1,51 @@
+This assignment is designed to test your client-side coding skills and show us
+what you’re good at! You can add or modify any of the JavaScript, HTML and CSS
+to complete the assignment. JQuery has been included for your convenience, but
+is not required. Please do not use jQuery plugins. Also avoid frameworks like
+Angular and Backbone. Please make sure the page works as a static page without
+the need to run a web server or a build script.
+
+First, prioritize the list of tasks below from high to low (1 -> top priority,
+7-> lowest priority). Please explain why you choose to prioritize this way,
+and what you considered when assigning high or low priority to each task.
+
+Second, pick at least two tasks out of the list and implement them. You may choose
+whatever tasks you prefer that you think will best reflect your coding skills.
+Browser support should include IE8+, Chrome, Safari, FF.
+
+Tasks Sorted By Priority
+========================================
+ 1  Create a photo carousel using the large photos linked from the thumbnails
+	currently in the page. Include an automatic slideshow mode, add prev/next
+	buttons to manually control the carousel, add a layer that shows the
+	contents of the images alt text.
+
+ 2  Split the reviews into blocks of 5 and create pagination. Allow the user
+	to sort the reviews by review score.
+
+ 3  Improve the room table. Allow the user to sort the room table by occupancy
+ 	or price, display a total when the user selects a quantity, display
+ 	additional information about rooms.
+
+ 4  Add an interactive location block to the page. It should contain a map and
+ 	some nearby landmarks.
+
+ 5  Improve the facilities block.
+ 
+ 6  Imagine there is a JSON feed with hotels similar to the current one.
+	Design JSON format and use the feed to display similar hotels on the page. 
+
+Priority Explanation
+========================
+Photos section needs attention first as it opens the images directly on a new page on-click and users need to click the back button which is not user friendly and might give the impression that the page is broken.
+
+Reviews section doesn't look nice with this long list so needs a fix.
+
+Room table doesn't look as bad as photos or reviews so it goes after that.
+
+location block: It's a new feature so it can be added after making other features usable.
+
+facilities block: Already looks good so the improvement can wait
+
+JSON part: It should be done either at first or at last. As a front end designer I'm putting it in the last place. After finishing the design I can just write some code to populate the dynamic sections from JSON feed
+

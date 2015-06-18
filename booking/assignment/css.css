@@ -239,7 +239,7 @@ h2 {
     margin: 0;
     box-sizing: border-box;
     font-size: 200%;
-    color: #dddddd;
+    color: #EEEEEE;
 }
 
 .carousel_nav{
@@ -257,6 +257,14 @@ h2 {
 }
 
 .large_photo:hover .carousel_nav{
+    opacity: 0.3;
+}
+
+.large_photo:hover .prev:hover{
+    opacity: 1;
+}
+
+.large_photo:hover .next:hover{
     opacity: 1;
 }
 
@@ -268,4 +276,13 @@ h2 {
 .carousel_nav.next{
     background-position: right center;
     right: 20px;
+}
+
+.photos a img{
+    border: 2px solid transparent;
+    transition: all .8s;
+}
+.photos a.active img{
+    border: 2px solid #6dadff;
+    transform: scale(1.1);
 }

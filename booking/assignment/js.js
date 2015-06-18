@@ -24,8 +24,15 @@ jQuery(document).ready(function ($) {
                 // after reaching opacity 0.2 change the image src
                 $(this).attr('src', $clicked_link.attr('href'));
                 $('.large_photo p').html($clicked_link.find('img').attr('alt'));
-                // change the opacity back to 1
-                $(this).fadeTo(200,1);
+                // wait for the image to load and change the opacity back to 1
+                $(this).one('load', function () {
+                    $(this).fadeTo(200,1);
+                });
+                // trigger 'load' event manually if the image is already cached by the browser
+                if($(this)[0].complete){
+                    $(this).trigger('load');
+                }
+
             });
 
             // pre-load the next one

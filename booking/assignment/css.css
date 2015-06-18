@@ -220,6 +220,7 @@ h2 {
 .large_photo{
     position: relative;
     margin: 20px 0;
+    min-height: 300px;
 }
 .large_photo img{
     width: 100%;

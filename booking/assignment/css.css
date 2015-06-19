@@ -213,10 +213,14 @@ h2 {
 	color: #0896ff;
 }
 
-/* CSS Below Added by Afzal */
 /**********************************/
 
+/* Added by Afzal : start */
+
 /* Image Carousel*/
+.photos ul{
+    text-align: center;
+}
 .large_photo{
     position: relative;
     margin: 20px 0;
@@ -261,13 +265,10 @@ h2 {
     opacity: 0.3;
 }
 
-.large_photo:hover .prev:hover{
+.large_photo:hover .prev:hover, .large_photo:hover .next:hover{
     opacity: 1;
 }
 
-.large_photo:hover .next:hover{
-    opacity: 1;
-}
 
 .carousel_nav.prev{
     background-position: left center;
@@ -287,3 +288,82 @@ h2 {
     border: 2px solid #6dadff;
     transform: scale(1.1);
 }
+
+/* Sorting Buttons*/
+.review-sort-buttons{
+    margin: 20px 0;
+    text-align: right;
+}
+
+.review-sort-buttons button{
+    margin-left: 20px;
+    cursor: pointer;
+    padding: 5px 10px;
+    background: transparent;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    color: #ffffff;
+    font-size: 140%;
+    letter-spacing: 1px;
+    transition: all .2s;
+}
+.review-sort-buttons button:focus{
+    outline: none;
+}
+
+.review-sort-buttons span{
+    font-size: 140%;
+}
+
+.review-sort-buttons .selected{
+    transform: scale(.95);
+}
+
+.review-sort-buttons .d_sort{
+    background-color: #939393;
+}
+
+.review-sort-buttons .d_sort.selected{
+    background-color: #696969;
+}
+
+.review-sort-buttons .b_sort{
+    background-color: #57bd47;
+}
+
+.review-sort-buttons .b_sort.selected{
+    background-color: #3e8034;
+}
+
+.review-sort-buttons .w_sort{
+    background-color: #c95444;
+}
+
+.review-sort-buttons .w_sort.selected{
+    background-color: #994537;
+}
+
+/* dot nav*/
+.review-dot-nav{
+    text-align: center;
+    margin: 20px auto;
+}
+
+.review-dot-nav .bullet{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #808080;
+    border-radius: 50%;
+    margin: 5px;
+    transition: all .4s;
+    cursor: pointer;
+}
+
+.review-dot-nav .bullet.current{
+    background-color: #989898;
+    border: 2px solid #808080;
+    transform: scale(1.2);
+}
+
+/* Added by Afzal : end */

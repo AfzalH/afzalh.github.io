@@ -29,11 +29,11 @@ jQuery(document).ready(function ($) {
     /***************************************/
     function init_photo_carousel() {
         // load initial photo
-        $('.large_photo img').attr('src', $('.photos li:first-child a').addClass('active').attr('href'));
-        $('.large_photo p').html($('.photos li:first-child img').attr('alt'));
+        $('.large_photo img').attr('src', $('.photos li').first().find('a').addClass('active').attr('href'));
+        $('.large_photo p').html($('.photos li').first().find('img').attr('alt'));
         //pre-load next one if exists
-        if ($('.photos li:first-child').next().length) {
-            $('<img/>')[0].src = $('.photos li:first-child').next().find('a').attr('href');
+        if ($('.photos li').first().next().length) {
+            $('<img/>')[0].src = $('.photos li').first().next().find('a').attr('href');
         }
     }
 
@@ -50,8 +50,8 @@ jQuery(document).ready(function ($) {
         // Load Next image on 'Next Button' click
         $('.carousel_nav.next').click(function () {
             // if the last child is active then load the first one
-            if ($('.photos li:last-child a').hasClass('active')) {
-                change_big_photo($('.photos li:first-child a'));
+            if ($('.photos li').last().find('a').hasClass('active')) {
+                change_big_photo($('.photos li').first().find('a'));
             }
             // find the active thumb and load the next one
             else {
@@ -62,8 +62,8 @@ jQuery(document).ready(function ($) {
         // Load Prev image on 'Prev Button' click
         $('.carousel_nav.prev').click(function () {
             // if the first child is active then load the last one
-            if ($('.photos li:first-child a').hasClass('active')) {
-                change_big_photo($('.photos li:last-child a'));
+            if ($('.photos li').first().find('a').hasClass('active')) {
+                change_big_photo($('.photos li').last().find('a'));
             }
             // find the active thumb and load the next one
             else {
@@ -85,17 +85,13 @@ jQuery(document).ready(function ($) {
     function change_big_photo(target) {
 
         // Reset the SlideShow timer - need to reset it as user may change image by clicking during the SlideInterval
-        //clearInterval(sliderInterval);
-        //sliderInterval = setInterval(function () {
-        //    // trigger next button click
-        //    $('.carousel_nav.next').click();
-        //}, slideShowDelay);
+        clearInterval(sliderInterval);
+        sliderInterval = setInterval(function () {
+            // trigger next button click
+            $('.carousel_nav.next').click();
+        }, slideShowDelay);
 
-        // remove 'active' class from siblings and assign 'active' class to current thumbnail
-        target.parent().siblings().each(function () {
-            $(this).children('a').removeClass('active');
-        });
-        target.addClass('active');
+
 
         //start pre-loading before fading
         $('<img/>')[0].src = target.attr('href');
@@ -105,6 +101,11 @@ jQuery(document).ready(function ($) {
             // after reaching opacity 0.2 change the image src
             $(this).attr('src', target.attr('href'));
             $('.large_photo p').html(target.find('img').attr('alt'));
+            // remove 'active' class from siblings and assign 'active' class to current thumbnail
+            target.parent().siblings().each(function () {
+                $(this).children('a').removeClass('active');
+            });
+            target.addClass('active');
             // wait for the image to load and change the opacity back to 1
             $(this).one('load', function () {
                 $(this).fadeTo(300, 1);
@@ -115,6 +116,8 @@ jQuery(document).ready(function ($) {
             }
 
         });
+
+
 
         // pre-load the next one if exists
         if (target.parent().next().length) {
@@ -244,7 +247,7 @@ jQuery(document).ready(function ($) {
         // find total pages required
         total_review = $('.reviews_list .one_review').length;
         // catch the fist one
-        current_review = $('.reviews_list .one_review:first-child');
+        current_review = $('.reviews_list .one_review').first();
         // loop through all the reviews
         for (i = 1; i <= total_review; i++) {
             var classname = 'page' + page_no;
@@ -268,7 +271,7 @@ jQuery(document).ready(function ($) {
             nav_html = nav_html + '<span class=\"bullet\" id=\"page' + i + '\"></span>';
         }
         // mark the first one as current page by adding a class
-        $('.review-dot-nav').html(nav_html).children('span:first-child').addClass('current');
+        $('.review-dot-nav').html(nav_html).children('span').first().addClass('current');
     }
 
     /**
@@ -278,7 +281,7 @@ jQuery(document).ready(function ($) {
         // remove the current class for the current nav
         $('.review-dot-nav span').removeClass('current');
         // assign it to the first one
-        $('.review-dot-nav span:first-child').addClass('current');
+        $('.review-dot-nav span').first().addClass('current');
     }
 });
 

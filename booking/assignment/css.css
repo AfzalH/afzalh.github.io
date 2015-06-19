@@ -239,6 +239,7 @@ h2 {
     display: block;
     bottom: 0;
     background-color: rgba(50,50,50,.4);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#4c333333', endColorstr='#4c333333');
     width: 100%;
     padding: 20px;
     margin: 0;

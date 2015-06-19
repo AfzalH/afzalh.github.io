@@ -58,7 +58,7 @@ Tasks Implemented
 I've implemented the following 2 tasks. Note that basic functionality is the same
 on different browsers but for modern browsers I've added some css3 styles
 (transition/opacity/transform etc) which won't work on older IE. Also this was desktop
-only implementation; I didn't optimize them for smaller viewports.
+only implementation; I didn't optimize it for smaller viewports.
 
 Codes added by me can be found by searching my name 'Afzal' or with some diff software
 

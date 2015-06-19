@@ -226,16 +226,28 @@ jQuery(document).ready(function ($) {
         $('.reviews_list .one_review').removeAttr('class').addClass('one_review');
         // add pagination classes (page1, page2 etc)
         review_add_page_classes();
-        // hide all at first
-        $('.reviews_list .one_review').hide();
         // show only the first page (items with class 'page1')
         $('.reviews_list .one_review.page1').show();
+        // hide all but page1 class
+        $('.reviews_list .one_review').not('.page1').hide();
+
     }
 
+    /**
+     * function to change the review page based on the dot nav click
+     * @param nav_id - id of the dot nav that was clicked. It's coded to be same as target page's class
+     */
     function review_update_page(nav_id) {
+        // retain the height (safari/windows problem)
+        $('.reviews_list').height($('.reviews_list').height());
+        // hide all with fadeout effect
         $('.reviews_list .one_review').fadeOut().hide();
+        // get the nav_id passed from nav click event and append to get the target class name
         var class_name = '.reviews_list .one_review.' + nav_id;
+        // show the target page
         $(class_name).fadeIn().show();
+        // remove the inline style
+        $('.reviews_list').removeAttr('style');
     }
 
     /**

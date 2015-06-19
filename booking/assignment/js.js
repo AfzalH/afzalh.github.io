@@ -85,11 +85,11 @@ jQuery(document).ready(function ($) {
     function change_big_photo(target) {
 
         // Reset the SlideShow timer - need to reset it as user may change image by clicking during the SlideInterval
-        clearInterval(sliderInterval);
-        sliderInterval = setInterval(function () {
-            // trigger next button click
-            $('.carousel_nav.next').click();
-        }, slideShowDelay);
+        //clearInterval(sliderInterval);
+        //sliderInterval = setInterval(function () {
+        //    // trigger next button click
+        //    $('.carousel_nav.next').click();
+        //}, slideShowDelay);
 
         // remove 'active' class from siblings and assign 'active' class to current thumbnail
         target.parent().siblings().each(function () {
